@@ -5,12 +5,15 @@ class BoardsController < ApplicationController
   
   def new
     @board = Board.new
-    
   end
   
   def create
     Board.create(board_params)
-    binding.pry
+  end
+  
+
+  def show
+    @board= Board.find(params[:id])
   end
   
 
